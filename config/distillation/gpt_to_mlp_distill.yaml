@@ -1,0 +1,34 @@
+# GPT到MLP知识蒸馏配置
+
+# 蒸馏配置
+distillation:
+  alpha: 0.5               # ground truth损失权重
+  beta: 0.5                # 预测蒸馏损失权重
+  temperature: 4.0         # 软化温度
+  use_feature_distill: true # 是否使用全局特征蒸馏
+  feature_loss_weight: 1.0 # 全局特征蒸馏损失权重
+  
+  # Patch级别特征蒸馏（MLP模型不支持）
+  use_patch_feature_distill: false
+  patch_feature_loss_weight: 0.0
+  patch_distill_mode: "direct"
+  contrastive_temperature: 0.1
+  
+  # 降参优化选项
+  tie_feature_and_patch: true         # 合并表征蒸馏（L_repr = L_feat + L_patch）
+  simplex_weights: true               # 权重归一化到单纯形
+
+# 训练配置
+train_config:
+  epochs: 100
+  batch_size: 32
+  lr_max: 0.001
+  weight_decay: 0.01
+  optimizer: Adam
+  scheduler: cosine
+  save_freq: 10
+  num_workers: 4
+  
+  # 早停配置
+  early_stop_patience: 10      # 连续多少个epoch无改善就停止训练
+  early_stop_min_delta: 1e-6   # 最小改善阈值 

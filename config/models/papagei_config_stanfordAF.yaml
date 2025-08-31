@@ -1,0 +1,35 @@
+model_config:
+  # Papagei ResNet1DMoE 架构参数
+  base_filters: 32
+  kernel_size: 3
+  stride: 2
+  groups: 1
+  n_block: 18
+  n_classes: 512
+  n_experts: 3
+  
+  # 任务特定参数
+  output_size: 2  # 分类任务，输出维度为2 (正常/房颤)
+  dropout: 0.3    # 分类任务使用稍高的dropout
+  
+  # 预训练模型路径
+  model_path: "papagei-foundation-model/weights/papagei_s.pt"
+  
+  # 微调策略
+  freeze_backbone: false  # 冻结骨干网络，只训练分类器
+  
+  # 输入处理参数
+  patch_size: 40  # 与数据配置保持一致
+  n_patches: 30   # 将由程序自动计算
+
+train_config:
+  epochs: 50
+  batch_size: 32
+  lr_max: 0.001  # 较小的学习率，因为使用预训练模型
+  optimizer: "AdamW"
+  weight_decay: 0.01
+  scheduler: "cosine"
+  
+  # 早停参数
+  patience: 15
+  min_delta: 0.001 

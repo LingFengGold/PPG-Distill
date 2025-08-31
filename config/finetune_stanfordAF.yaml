@@ -1,0 +1,14 @@
+task_name: 'stanfordAF'
+task: 'classification'  # classification, regression
+tune_mode: 'full'   # full, head
+model_size: '19M'   # 19M, 85M, 345M, 1B
+
+# npy files for x and y
+train_data_path: './datasets/AF/filtered_x_train_1200.npy'
+train_label_path: './datasets/AF/filtered_y_train.npy'
+
+val_data_path: './datasets/AF/filtered_x_val_1200.npy'
+val_label_path: './datasets/AF/filtered_y_val.npy'
+
+test_data_path: './datasets/AF/filtered_x_test_1200.npy'
+test_label_path: './datasets/AF/filtered_y_test.npy'

@@ -1,0 +1,17 @@
+model_config:
+  model_name: linear
+  patch_size: 40
+  output_size: 2
+  dropout: 0.1
+  use_activation: false
+  hidden_dim: 512
+  activation: relu
+train_config:
+  epochs: 100
+  batch_size: 32
+  lr_max: 0.001
+  weight_decay: 0.01
+  optimizer: Adam
+  scheduler: cosine
+  save_freq: 10
+  num_workers: 4

@@ -1,0 +1,41 @@
+distillation:
+  # 蒸馏损失权重 - 新的权重模式
+  alpha: 0.5      # 预测蒸馏损失权重
+  beta: 0.1       # 全局特征蒸馏损失权重
+  gamma: 0      # patch级别蒸馏损失权重
+  temperature: 2.0  # 软化温度
+  
+  # 全局特征蒸馏设置
+  use_feature_distill: true
+  feature_loss_weight: 1.0
+  
+  # patch级别特征蒸馏设置
+  use_patch_feature_distill: true
+  patch_feature_loss_weight: 1.0
+  patch_distill_mode: 'contrastive'  # 'direct' 或 'contrastive'
+  contrastive_temperature: auto
+  
+  # patch距离蒸馏设置
+  use_patch_distance_distill: true
+  patch_distance_loss_weight: 1.0
+  
+  # 降参优化选项
+  tie_feature_and_patch: true  # 合并表征蒸馏
+
+train_config:
+  epochs: 120
+  batch_size: 64
+  lr_init: 1e-5
+  lr_max: 1e-3
+  lr_final: 1e-6
+  lr_schedule_ratio: 1
+  lr_warm_up: 0.25
+  optimizer: "AdamW"
+  weight_decay: 0.00001
+  
+  # 保存设置
+  save_freq: 10
+  
+  # 早停参数
+  early_stop_patience: 20
+  early_stop_min_delta: 1e-6 

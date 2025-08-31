@@ -1,0 +1,43 @@
+task_name: 'dalia'
+task: 'regression'  # classification, regression
+tune_mode: 'full'   # full, head
+model_size: '19M'   # 19M, 85M, 345M, 1B
+gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep19_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep14_mimic3ms_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep14_mimic3ms_ucsf_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep14_mimic3ms_ucsf_v2_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep14_mimic3ms_ucsf_lr2x_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep14_mimic3ms_1minreal_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep19_mimic3ms_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep4_ucsf_full_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep4_patchaug_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep9_patchaug_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep4_mimic_full_laplace.pt'
+# gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep4_mimic3ms_ucsf_v3_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_19M_ep4_mimic_full_v2_laplace.pt'
+# gpt_state_dict_path: 'gpt_base_models/gpt_85M_ep19_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_85M_1min_ep14_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_85M_ep14_mimic3ms_1minreal_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_85M_6min_ep14_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_85M_6min_ep19_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_85M_ep4_mimic3ms_ucsf_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_85M_ep4_mimic3ms_ucsf_v1_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_85M_ep9_mimic3ms_ucsf_v2_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_85M_ep14_mimic3ms_ucsf_v2_laplace.pt'
+#gpt_state_dict_path: 'gpt_base_models/gpt_345M_ep19_laplace.pt'
+
+#model_name: 'sqigpt'  # 'gpt', 'sqigpt'
+#gpt_state_dict_path: './gpt_base_models/gpt_19M_ep4_laplace_sqigpt.pt'  # where is your base GPT?
+
+# npy files for x and y
+train_data_path: './datasets/DALIA/X_DALIA_train_v2.npy'
+#train_data_path: './datasets/DALIA/X_DALIA_train_v2_30s.npy'
+train_label_path: './datasets/DALIA/y_DALIA_train_v2.npy'
+
+val_data_path: './datasets/DALIA/X_DALIA_val_v2.npy'
+#val_data_path: './datasets/DALIA/X_DALIA_val_v2_30s.npy'
+val_label_path: './datasets/DALIA/y_DALIA_val_v2.npy'
+
+test_data_path: './datasets/DALIA/X_DALIA_test_v2.npy'
+#test_data_path: './datasets/DALIA/X_DALIA_test_v2_30s.npy'
+test_label_path: './datasets/DALIA/y_DALIA_test_v2.npy'

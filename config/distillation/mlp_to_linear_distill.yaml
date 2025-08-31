@@ -1,0 +1,15 @@
+distillation:
+  alpha: 0.3
+  beta: 0.7
+  temperature: 3.0
+  use_feature_distill: true
+  feature_loss_weight: 0.5
+train_config:
+  epochs: 80
+  batch_size: 32
+  lr_max: 0.001
+  weight_decay: 0.01
+  optimizer: Adam
+  scheduler: cosine
+  save_freq: 10
+  num_workers: 4

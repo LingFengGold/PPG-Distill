@@ -1,0 +1,1 @@
+srun --job-name "InteractiveJob" --partition i.q --mem 65000 -G 1 --cpus-per-task 2 --time 12:00:00 --pty bash
