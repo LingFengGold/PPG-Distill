@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-<img src="./figures/fig.png" width="100">
+<img src="./figures/fig.png" width="1000">
 </p>
 
 ## Quick Run
