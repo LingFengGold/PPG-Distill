@@ -1,6 +1,4 @@
 <div align="center">
-  <!-- <h1><b> TimeDistill </b></h1> -->
-  <!-- <h2><b> TimeDistill </b></h2> -->
   <h2><b>[NeurIPS 2025 TS4H] PPG-Distill: Efficient Photoplethysmography Signals Analysis via Foundation Model Distillation</b></h2>
 </div>
 
