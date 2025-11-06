@@ -1,14 +1,10 @@
-# GPT到Linear知识蒸馏配置
-
-# 蒸馏配置
 distillation:
-  alpha: 0.5               # ground truth损失权重
-  beta: 0.5                # 预测蒸馏损失权重
-  temperature: 4.0         # 软化温度
-  use_feature_distill: true # 是否使用特征蒸馏
-  feature_loss_weight: 1.0 # 特征蒸馏损失权重
+  alpha: 0.5
+  beta: 0.5
+  temperature: 4.0
+  use_feature_distill: true
+  feature_loss_weight: 1.0
 
-# 训练配置
 train_config:
   epochs: 100
   batch_size: 32

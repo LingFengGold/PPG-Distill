@@ -1,10 +1,8 @@
 distillation:
-  # 蒸馏损失权重
-  alpha: 0.3      # ground truth损失权重
-  beta: 0.7       # 预测蒸馏损失权重
-  temperature: 4.0  # 软化温度
+  alpha: 0.3
+  beta: 0.7
+  temperature: 4.0
   
-  # 特征蒸馏设置
   use_feature_distill: true
   feature_loss_weight: 1.0
 
@@ -16,9 +14,7 @@ train_config:
   weight_decay: 0.01
   scheduler: "cosine"
   
-  # 保存设置
   save_freq: 10
   
-  # 早停参数
   patience: 15
   min_delta: 0.001 
