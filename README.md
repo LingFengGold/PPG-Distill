@@ -2,10 +2,6 @@
   <h2><b>[NeurIPS 2025 TS4H] PPG-Distill: Efficient Photoplethysmography Signals Analysis via Foundation Model Distillation</b></h2>
 </div>
 
-<p align="center">
-<img src="./figures/fig.png" width="1000">
-</p>
-
 ## Quick Run
 
 This guide provides a quick way to get started with training and distilling models using our framework.
