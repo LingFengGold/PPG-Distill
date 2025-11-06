@@ -1,10 +1,9 @@
 <div align="center">
   <!-- <h1><b> TimeDistill </b></h1> -->
   <!-- <h2><b> TimeDistill </b></h2> -->
-  <h2><b> PPG-Distill: Efficient Photoplethysmography Signals Analysis via Foundation Model Distillation </b></h2>
+  <h2><b>[NeurIPS 2025 TS4H] PPG-Distill</b></h2>
+  <h2><b>Efficient Photoplethysmography Signals Analysis via Foundation Model Distillation</b></h2>
 </div>
-
-This is the official repository for the paper "[NeurIPS 2025 TS4H] PPG-Distill: Efficient Photoplethysmography Signals Analysis via Foundation Model Distillation".
 
 **Paper:** [arxiv.org/abs/2509.19215](https://arxiv.org/abs/2509.19215)
 
@@ -22,6 +21,8 @@ mkdir -p papagei-foundation-model/weights
 
 # Download the papagei_s.pt model weights
 wget -O papagei-foundation-model/weights/papagei_s.pt https://zenodo.org/records/13983110/files/papagei%5Fs.pt?download=1
+
+(or mannully download the weight from https://github.com/Nokia-Bell-Labs/papagei-foundation-model)
 ```
 
 ### 2. Configure Model Paths
@@ -37,9 +38,9 @@ Example of the line to modify in the YAML files:
 model_path: "path/to/your/papagei_s.pt"
 ```
 
-### 3. Train a Teacher Model
+### 3. Finetune a Teacher Model
 
-You can train a teacher model (e.g., PaPaGei) on a specific dataset. Here is an example command for training on the `dalia` dataset:
+You can finetune a teacher model (e.g., PaPaGei) on a specific dataset. Here is an example command for training on the `dalia` dataset:
 
 ```bash
 python train.py --model_type papagei --dataset dalia
@@ -64,4 +65,19 @@ This command will:
 - Run the distillation process.
 - Save the distilled student model in the directory specified by `--save_dir_student`.
 
+---
+>
+> 🧑‍💻 Please let us know if you notice any mistakes or have suggestions!
+>
+> 🌟 If you find this resource helpful, please consider starring this repository and citing our research:
+```
+@inproceedings{
+    ni2025ppgdistill,
+    title={{PPG}-Distill: Efficient Photoplethysmography Signals Analysis via Foundation Model Distillation},
+    author={Juntong Ni and Saurabh Kataria and Shengpu Tang and Carl Yang and Xiao Hu and Wei Jin},
+    booktitle={NeurIPS 2025 Workshop on Learning from Time Series for Health},
+    year={2025},
+    url={https://openreview.net/forum?id=OStTScAV5g}
+}
+```
 ---
