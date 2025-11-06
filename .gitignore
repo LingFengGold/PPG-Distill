@@ -128,3 +128,9 @@ papagei-foundation-model/
 gpt_base_models/
 *.zip
 __MACOSX/
+submit*
+training_summary_report.txt
+interaction.sh
+run.sh
+install_conda_env.sh
+*.csv
