@@ -1,5 +1,5 @@
 <div align="center">
-  <h2><b>[NeurIPS 2025 TS4H] PPG-Distill: Efficient Photoplethysmography Signals Analysis via Foundation Model Distillation</b></h2>
+  <h2><b>[NeurIPS 2025 TS4H Spotlight] PPG-Distill: Efficient Photoplethysmography Signals Analysis via Foundation Model Distillation</b></h2>
 </div>
 
 ## Quick Run
